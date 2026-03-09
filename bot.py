@@ -20,4 +20,4 @@ def signal_logic():
 
 while True:
     signal_logic()
-    time.sleep(3600)  # 3600 secondes = 1 heure
+    time.sleep(300)  # 3600 secondes = 1 heure
