@@ -33,10 +33,10 @@ def calculate_indicators(df):
     return df
 
 def analyse_signal(df):
-    last = df.iloc[-1]  # dernière ligne
-    ema50 = float(last['EMA50'])
-    ema100 = float(last['EMA100'])
-    rsi = float(last['RSI'])
+    # Prendre les dernières valeurs numériques
+    ema50 = df['EMA50'].values[-1]
+    ema100 = df['EMA100'].values[-1]
+    rsi = df['RSI'].values[-1]
 
     if ema50 > ema100 and rsi < 35:
         return "📊 SIGNAL EUR/USD\nDirection : CALL ⬆\nDurée : 1 minute"
